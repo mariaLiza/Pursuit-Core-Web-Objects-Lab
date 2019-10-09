@@ -157,7 +157,7 @@ var cubeObj = {}
 
 for (let i=1;i<=20;i++){
     cubeObj.i = i
-    console.log(cubeObj.i)
+    //console.log(cubeObj.i)
     console.log(Math.pow(cubeObj.i,3))
   }
 
