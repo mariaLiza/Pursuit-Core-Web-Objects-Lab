@@ -139,7 +139,12 @@ var peopleWithScores = [
 
 var highestScoringName = ""
 
-// Your code here
+let max = peopleWithScores[0]["score"]
+for(let i = 0; i<peopleWithScores.length;i++) {
+  if (max < peopleWithScores[i]["score"])
+  max = peopleWithScores[i]["score"]
+  
+} 
 
 //assert(highestScoringName === "Garry Mckenzie")
 
