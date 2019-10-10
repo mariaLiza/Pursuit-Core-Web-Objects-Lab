@@ -157,11 +157,11 @@ assert(highestScoringName === "Garry Mckenzie")
 
 var cubeObj = {}
 
-for (let i=1;i<=20;i++){
-    cubeObj.i +=i
-    //console.log(cubeObj.i)
-    console.log(Math.pow(cubeObj.i,3))
-  }
+for (let i=1;i<=20;i++) {
+    cubeObj[i] = Math.pow(i,3)
+    }    
+    console.log(cubeObj)
+
 
 assert(Object.keys(cubeObj).length === 20)
 assert(cubeObj[1] === 1)
