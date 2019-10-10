@@ -109,6 +109,7 @@ assert(authorScores["Erik Larson"] === 9.2)
 // Question Four
 // You are given an array of objects. Each object in the array describes the score of a person. Find the person with the best score and print his full name.
 
+    
 var peopleWithScores = [
     {
         firstName: "Calvin",
@@ -139,24 +140,25 @@ var peopleWithScores = [
 
 var highestScoringName = ""
 
-let max = peopleWithScores[0]["score"]
+let max = peopleWithScores[0]
 for(let i = 0; i<peopleWithScores.length;i++) {
-  if (max < peopleWithScores[i]["score"])
-  max = peopleWithScores[i]["score"]
-
+  if (max["score"] < peopleWithScores[i]["score"])
+  max = peopleWithScores[i]
 } 
+highestScoringName = (max["firstName"] + " " + max["lastName"])
+console.log(highestScoringName)
 
-//assert(highestScoringName === "Garry Mckenzie")
+assert(highestScoringName === "Garry Mckenzie")
 
-// Question Five
+//Question Five
 
-// Write code below such that cubeObj maps the numbers between 1 and 20 inclusive to their cubes.  A number's cube is that number multiplied by itself twice:
-// 2 ^ 3 = 2 * 2 * 2 = 8
+//Write code below such that cubeObj maps the numbers between 1 and 20 inclusive to their cubes.  A number's cube is that number multiplied by itself twice:
+//2 ^ 3 = 2 * 2 * 2 = 8
 
 var cubeObj = {}
 
 for (let i=1;i<=20;i++){
-    cubeObj.i = i
+    cubeObj.i +=i
     //console.log(cubeObj.i)
     console.log(Math.pow(cubeObj.i,3))
   }
@@ -168,14 +170,15 @@ assert(cubeObj[3] === 27)
 assert(cubeObj[14] === 2744)
 assert(cubeObj[20] === 8000)
 
+
 // Question Six
 
 // Find the most common letter in the string below.  Use an object to generate your solution that maps a character to the number of times it appears in the string.  Ignore whitespaces and capitalization.
- var myString = "We're flooding people with information. We need to feed it through a processor. A human must turn information into intelligence or knowledge. We've tended to forget that no computer will ever ask a new question."
+//  var myString = "We're flooding people with information. We need to feed it through a processor. A human must turn information into intelligence or knowledge. We've tended to forget that no computer will ever ask a new question."
 
-var frequencyObj = {}
+// var frequencyObj = {}
 
-var mostFrequentChar
+// var mostFrequentChar
 
 // Your code here
 
